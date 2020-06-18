@@ -2,13 +2,16 @@
   "name": "ydke",
   "version": "1.0.0",
   "description": "Convert to and from ydke:// URL deck lists",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": "https://github.com/ProjectIgnis/ydke.js",
+  "homepage": "https://github.com/ProjectIgnis/ydke.js",
   "author": "Kevin Lu",
   "license": "LGPL-3.0+",
   "private": false,
   "scripts": {
-    "build": "tsc index.ts"
+    "build": "tsc",
+    "prepublish": "tsc"
   },
   "devDependencies": {
     "@types/node": "^14.0.13",

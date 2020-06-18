@@ -20,7 +20,7 @@ export function passcodesToBase64(passcodes: Uint32Array): string {
 
 
 export interface TypedDeck {
-    main, extra, side: Uint32Array;
+    main: Uint32Array, extra: Uint32Array, side: Uint32Array;
 }
 
 export function parseURL(ydke: string): TypedDeck {
