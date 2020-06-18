@@ -45,16 +45,13 @@ export function toURL(deck: TypedDeck): string {
         passcodesToBase64(deck.side) + "!";
 }
 
-export function extractURL(query: string): string[] | null {
+export function extractURLs(from: string): string[] {
     const ydkeReg = /ydke:\/\/[A-Za-z0-9+/=]*?![A-Za-z0-9+/=]*?![A-Za-z0-9+/=]*?!/g;
-    let match = ydkeReg.exec(query);
+    let match = ydkeReg.exec(from);
     const matches = [];
     while (match !== null) {
         matches.push(match[0]);
-        match = ydkeReg.exec(query);
-    }
-    if (matches.length === 0) {
-        return null;
+        match = ydkeReg.exec(from);
     }
     return matches;
 }
