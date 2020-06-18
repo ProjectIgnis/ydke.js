@@ -1,3 +1,6 @@
+// Copyright (C) 2020  Kevin Lu
+// SPDX-License-Identifier: LGPL-3.0-or-later
+
 // Note: the following conversions depend on little-endian byte order and
 // is approximately equivalent to a pointer cast. This could be made
 // endianness-independent in the future but there is not much demand
